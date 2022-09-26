@@ -1,0 +1,25 @@
+.navBar {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  color: red;
+}
+
+.title:hover {
+  color: aqua;
+  cursor: pointer;
+}
+
+.search {
+  width: 36px;
+  height: 36px;
+}
+
+.search:hover {
+  cursor: pointer;
+}
