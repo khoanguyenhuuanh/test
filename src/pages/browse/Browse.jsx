@@ -57,6 +57,7 @@ function Browse() {
           vote_count: movieData.vote_count,
         };
       });
+      // setMoviesNetflixOriginals(transformedMovies);
       return transformedMovies;
     } catch (error) {
       setError(error.message);
@@ -69,9 +70,6 @@ function Browse() {
     setMoviesNetflixOriginals(
       fetchMoviesHandler(requests.fetchNetflixOriginals)
     );
-    const dataNetflixOriginals = [];
-    fetchMoviesHandler(requests.fetchNetflixOriginals, dataNetflixOriginals);
-    setMoviesNetflixOriginals(dataNetflixOriginals);
     setMoviesTopRated(fetchMoviesHandler(requests.fetchTopRated));
     setMoviesAction(fetchMoviesHandler(requests.fetchActionMovies));
     setMoviesComedy(fetchMoviesHandler(requests.fetchComedyMovies));
@@ -92,6 +90,7 @@ function Browse() {
   ]);
 
   console.log(moviesNetflixOriginals);
+  console.log(moviesTrending);
 
   const opts = {
     height: "400",
